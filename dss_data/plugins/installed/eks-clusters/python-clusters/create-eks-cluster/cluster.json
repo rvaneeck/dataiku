@@ -1,0 +1,127 @@
+{
+    "meta" : {
+        "label" : "Create EKS cluster",
+        "description" : "Create EKS clusters",
+        "icon" : "icon-puzzle-piece",
+        "longDescription" : ""
+    },
+
+    "architecture" : "KUBERNETES",
+
+    "params": [
+        {
+            "name": "connectionInfo",
+            "label": "Connection",
+            "type": "PRESET",
+            "parameterSetId" : "connection-info",
+            "mandatory" : true
+        },
+        {
+            "name": "assumeRoleARN",
+            "label": "IAM Role ARN to assume",
+            "description": "Assumes an IAM role to perform cluster operations instead of the default AWS credential provider chain. If empty, uses AWS credentials defined above",
+            "type": "STRING",
+            "mandatory": false
+        },
+        {
+            "name": "s-network",
+            "type":"SEPARATOR",
+            "label": "Networking"
+        },
+        {
+            "name": "networkingSettings",
+            "label": "Network settings",
+            "type": "PRESET",
+            "parameterSetId" : "networking-settings",
+            "mandatory" : false
+        },
+        {
+            "name": "s-nodes",
+            "type":"SEPARATOR",
+            "label": "Cluster nodes"
+        },
+        {
+            "name": "nodePool",
+            "label": "Initial node pool",
+            "type": "PRESET",
+            "parameterSetId" : "node-pool-request",
+            "mandatory" : false
+        },
+        {
+            "name": "nodePools",
+            "label": "Additional node pools",
+            "type": "PRESETS",
+            "parameterSetId" : "node-pool-request",
+            "mandatory" : false
+        },
+        {
+            "name": "s-advanced",
+            "type":"SEPARATOR",
+            "label": "Advanced"
+        },
+        {
+            "name": "k8sVersion",
+            "label": "Kubernetes version",
+            "type": "STRING",
+            "mandatory" : false,
+            "description" : "Leave empty for current default of eksctl"
+        },
+        {
+             "name": "installMetricsServer",
+             "label": "Install metrics server",
+             "type": "BOOLEAN",
+             "mandatory" : true,
+             "defaultValue" : true
+        },
+        {
+            "name": "privateCluster",
+            "label": "Fully-private",
+            "type": "BOOLEAN",
+            "description": "VPC endpoints will be created for the cluster. The first security group of the Network Settings will be used as shared SG."
+        },
+        {
+            "name": "skipEndpointCreation",
+            "label": "Skip VPC Endpoints creation",
+            "type": "BOOLEAN",
+            "description": "If the VPC endpoints already exist, don't attempt to create new ones",
+            "visibilityCondition": "model.privateCluster == true"
+        },
+        {
+            "name": "injectedSG",
+            "label": "Injected DSS SG",
+            "type": "STRING",
+            "description": "Security group id to add as inbound on the cluster's autocreated SGs. Should allow inbound traffic from DSS."
+        },
+        {
+            "name": "makePrivateOnly",
+            "label": "Revoke public access",
+            "type": "BOOLEAN",
+            "description": "If true, the EKS endpoint is made private-only (otherwise it will remain both public and private)"
+        },
+        {
+            "name": "advanced",
+            "label": "Use Advanced Configuration",
+            "type": "BOOLEAN"
+        },
+        {
+            "name": "clusterAutoScaling",
+            "label": "Use Cluster Autoscaling",
+            "type": "BOOLEAN",
+            "visibilityCondition": "model.advanced == true"
+        },
+        {
+            "name": "advancedGPU",
+            "label": "Use GPU",
+            "type": "BOOLEAN",
+            "visibilityCondition": "model.advanced == true"
+        },
+        {
+            "name": "advancedYaml",
+            "label": "Advanced Configuration",
+            "description": "Use YAML. If you use advanced configuration, presets will not be used. For examples, see https://github.com/weaveworks/eksctl/tree/master/examples",
+            "type": "TEXTAREA",
+            "mandatory" : false,
+            "visibilityCondition": "model.advanced == true"
+        }
+    ]
+}

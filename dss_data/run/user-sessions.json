@@ -1,0 +1,13 @@
+{
+  "tokens": [
+    {
+      "user": "admin",
+      "accessToken": "QJUwbsvr8uMJaE9gpnw14HDSSgAnMi4b57Rrh46iKkgaSLA9z6r869NzF3TARagk",
+      "identityToken": "kjryxy5xYLCw5JCYMbAx0SgvtJN5NCTB5S5eyI2OIZMYsM9CPmpAGPfVkW3USPw1",
+      "xsrfTokenSalt": "g9bA2KLZ",
+      "granted": 1729363474537,
+      "refreshed": 1729363474537,
+      "forcedExpire": 0
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "language": "scala",
+  "display_name": "Spark-Scala",
+  "env": { "DEFAULT_INTERPRETER": "Scala" },
+  "argv": [
+    "/bin/bash",
+    "-ec",
+    "exec \"$DIP_HOME\"/jupyter-run/jupyter/kernels/toree/toree.sh --profile \"$0\"",
+    "{connection_file}"
+  ]
+}

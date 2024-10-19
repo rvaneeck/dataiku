@@ -1,0 +1,1856 @@
+{
+  "events": [
+    {
+      "rollbarIt": true,
+      "time": "2024-10-19-10-24-54-651",
+      "exception": {
+        "errorType": "com.dataiku.dip.exceptions.UnauthorizedException",
+        "message": "Public API call failure: /dip/publicapi/admin/clusters/fe-sandbox-cluster: Failed to read cluster permissions",
+        "detailedMessage": "Failed to read cluster permissions, caused by: NotFoundException: Cluster does not exist: fe-sandbox-cluster",
+        "detailedMessageHTML": "\u003cspan\u003e\u003cspan class\u003d\"err-msg\"\u003eFailed to read cluster permissions\u003c/span\u003e\u003cspan class\u003d\"err-cause\"\u003e\u003cspan class\u003d\"err-type\"\u003e, caused by: NotFoundException:\u003c/span\u003e\u0026nbsp;\u003cspan class\u003d\"err-msg\"\u003eCluster does not exist: fe-sandbox-cluster\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e",
+        "stackTraceStr": "com.dataiku.dip.exceptions.UnauthorizedException: Failed to read cluster permissions\n\tat com.dataiku.dip.security.PermissionsService.hasClusterPrivilege(PermissionsService.java:490)\n\tat com.dataiku.dip.security.PermissionsService.checkClusterPrivileges(PermissionsService.java:846)\n\tat com.dataiku.dip.server.api.admin.PublicAPIClustersController.get(PublicAPIClustersController.java:83)\n\tat com.dataiku.dip.server.api.admin.PublicAPIClustersController$$FastClassBySpringCGLIB$$99767f7d.invoke(\u003cgenerated\u003e)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\tat com.dataiku.dip.server.controllers.AuditedCallAspect.doCall(AuditedCallAspect.java:62)\n\tat jdk.internal.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\tat com.dataiku.dip.server.controllers.CallTracingAspect.doCall(CallTracingAspect.java:86)\n\tat jdk.internal.reflect.GeneratedMethodAccessor49.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)\n\tat com.dataiku.dip.server.api.admin.PublicAPIClustersController$$EnhancerBySpringCGLIB$$ff55f8ae.get(\u003cgenerated\u003e)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:903)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:809)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)\n\tat com.dataiku.dip.server.controllers.DKUDispatcherServlet.doDispatch(DKUDispatcherServlet.java:60)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n\tat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:687)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\n\tat org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)\n\tat org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)\n\tat org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)\n\tat com.dataiku.dip.server.CorsFilter.doFilterInternal(CorsFilter.java:47)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)\n\tat org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)\n\tat org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)\n\tat com.dataiku.dip.shaker.server.ResourceFilter.doFilter(ResourceFilter.java:33)\n\tat org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)\n\tat org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)\n\tat org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1384)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)\n\tat org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1306)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)\n\tat org.eclipse.jetty.server.Server.handle(Server.java:563)\n\tat org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)\n\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)\n\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)\n\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)\n\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)\n\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)\n\tat org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)\n\tat org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\nCaused by: com.dataiku.dip.server.controllers.NotFoundException: Cluster does not exist: fe-sandbox-cluster\n\tat com.dataiku.dip.dao.impl.FilesBasedClustersDAO.getMandatory(FilesBasedClustersDAO.java:59)\n\tat com.dataiku.dip.dao.impl.FilesBasedClustersDAO.getMandatoryUnsafe(FilesBasedClustersDAO.java:53)\n\tat com.dataiku.dip.cluster.ClustersService.getMandatoryUnsafe(ClustersService.java:138)\n\tat com.dataiku.dip.security.PermissionsService.hasClusterPrivilege(PermissionsService.java:488)\n\t... 88 more\n",
+        "stackTrace": [
+          {
+            "file": "PermissionsService.java",
+            "line": 490,
+            "function": "com.dataiku.dip.security.PermissionsService.hasClusterPrivilege"
+          },
+          {
+            "file": "PermissionsService.java",
+            "line": 846,
+            "function": "com.dataiku.dip.security.PermissionsService.checkClusterPrivileges"
+          },
+          {
+            "file": "PublicAPIClustersController.java",
+            "line": 83,
+            "function": "com.dataiku.dip.server.api.admin.PublicAPIClustersController.get"
+          },
+          {
+            "file": "\u003cgenerated\u003e",
+            "line": -1,
+            "function": "com.dataiku.dip.server.api.admin.PublicAPIClustersController$$FastClassBySpringCGLIB$$99767f7d.invoke"
+          },
+          {
+            "file": "MethodProxy.java",
+            "line": 218,
+            "function": "org.springframework.cglib.proxy.MethodProxy.invoke"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 792,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 163,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "MethodInvocationProceedingJoinPoint.java",
+            "line": 89,
+            "function": "org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed"
+          },
+          {
+            "file": "AuditedCallAspect.java",
+            "line": 62,
+            "function": "com.dataiku.dip.server.controllers.AuditedCallAspect.doCall"
+          },
+          {
+            "line": -1,
+            "function": "jdk.internal.reflect.GeneratedMethodAccessor51.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 634,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 624,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod"
+          },
+          {
+            "file": "AspectJAroundAdvice.java",
+            "line": 72,
+            "function": "org.springframework.aop.aspectj.AspectJAroundAdvice.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 175,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "MethodInvocationProceedingJoinPoint.java",
+            "line": 89,
+            "function": "org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed"
+          },
+          {
+            "file": "CallTracingAspect.java",
+            "line": 86,
+            "function": "com.dataiku.dip.server.controllers.CallTracingAspect.doCall"
+          },
+          {
+            "line": -1,
+            "function": "jdk.internal.reflect.GeneratedMethodAccessor49.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 634,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 624,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod"
+          },
+          {
+            "file": "AspectJAroundAdvice.java",
+            "line": 72,
+            "function": "org.springframework.aop.aspectj.AspectJAroundAdvice.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 175,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "ExposeInvocationInterceptor.java",
+            "line": 97,
+            "function": "org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 186,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 707,
+            "function": "org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept"
+          },
+          {
+            "file": "\u003cgenerated\u003e",
+            "line": -1,
+            "function": "com.dataiku.dip.server.api.admin.PublicAPIClustersController$$EnhancerBySpringCGLIB$$ff55f8ae.get"
+          },
+          {
+            "file": "NativeMethodAccessorImpl.java",
+            "line": -2,
+            "function": "jdk.internal.reflect.NativeMethodAccessorImpl.invoke0"
+          },
+          {
+            "file": "NativeMethodAccessorImpl.java",
+            "line": 77,
+            "function": "jdk.internal.reflect.NativeMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "InvocableHandlerMethod.java",
+            "line": 205,
+            "function": "org.springframework.web.method.support.InvocableHandlerMethod.doInvoke"
+          },
+          {
+            "file": "InvocableHandlerMethod.java",
+            "line": 150,
+            "function": "org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest"
+          },
+          {
+            "file": "ServletInvocableHandlerMethod.java",
+            "line": 117,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle"
+          },
+          {
+            "file": "RequestMappingHandlerAdapter.java",
+            "line": 903,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod"
+          },
+          {
+            "file": "RequestMappingHandlerAdapter.java",
+            "line": 809,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal"
+          },
+          {
+            "file": "AbstractHandlerMethodAdapter.java",
+            "line": 87,
+            "function": "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle"
+          },
+          {
+            "file": "DispatcherServlet.java",
+            "line": 1072,
+            "function": "org.springframework.web.servlet.DispatcherServlet.doDispatch"
+          },
+          {
+            "file": "DKUDispatcherServlet.java",
+            "line": 60,
+            "function": "com.dataiku.dip.server.controllers.DKUDispatcherServlet.doDispatch"
+          },
+          {
+            "file": "DispatcherServlet.java",
+            "line": 965,
+            "function": "org.springframework.web.servlet.DispatcherServlet.doService"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 1006,
+            "function": "org.springframework.web.servlet.FrameworkServlet.processRequest"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 898,
+            "function": "org.springframework.web.servlet.FrameworkServlet.doGet"
+          },
+          {
+            "file": "HttpServlet.java",
+            "line": 687,
+            "function": "javax.servlet.http.HttpServlet.service"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 883,
+            "function": "org.springframework.web.servlet.FrameworkServlet.service"
+          },
+          {
+            "file": "HttpServlet.java",
+            "line": 790,
+            "function": "javax.servlet.http.HttpServlet.service"
+          },
+          {
+            "file": "ServletHolder.java",
+            "line": 1419,
+            "function": "org.eclipse.jetty.servlet.ServletHolder$NotAsync.service"
+          },
+          {
+            "file": "ServletHolder.java",
+            "line": 764,
+            "function": "org.eclipse.jetty.servlet.ServletHolder.handle"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1665,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter"
+          },
+          {
+            "file": "CorsFilter.java",
+            "line": 47,
+            "function": "com.dataiku.dip.server.CorsFilter.doFilterInternal"
+          },
+          {
+            "file": "OncePerRequestFilter.java",
+            "line": 117,
+            "function": "org.springframework.web.filter.OncePerRequestFilter.doFilter"
+          },
+          {
+            "file": "DelegatingFilterProxy.java",
+            "line": 354,
+            "function": "org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate"
+          },
+          {
+            "file": "DelegatingFilterProxy.java",
+            "line": 267,
+            "function": "org.springframework.web.filter.DelegatingFilterProxy.doFilter"
+          },
+          {
+            "file": "FilterHolder.java",
+            "line": 202,
+            "function": "org.eclipse.jetty.servlet.FilterHolder.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1635,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter"
+          },
+          {
+            "file": "ResourceFilter.java",
+            "line": 33,
+            "function": "com.dataiku.dip.shaker.server.ResourceFilter.doFilter"
+          },
+          {
+            "file": "FilterHolder.java",
+            "line": 210,
+            "function": "org.eclipse.jetty.servlet.FilterHolder.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1635,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 527,
+            "function": "org.eclipse.jetty.servlet.ServletHandler.doHandle"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 221,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextHandle"
+          },
+          {
+            "file": "ContextHandler.java",
+            "line": 1384,
+            "function": "org.eclipse.jetty.server.handler.ContextHandler.doHandle"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 176,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextScope"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 484,
+            "function": "org.eclipse.jetty.servlet.ServletHandler.doScope"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 174,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextScope"
+          },
+          {
+            "file": "ContextHandler.java",
+            "line": 1306,
+            "function": "org.eclipse.jetty.server.handler.ContextHandler.doScope"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 129,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.handle"
+          },
+          {
+            "file": "HandlerWrapper.java",
+            "line": 122,
+            "function": "org.eclipse.jetty.server.handler.HandlerWrapper.handle"
+          },
+          {
+            "file": "Server.java",
+            "line": 563,
+            "function": "org.eclipse.jetty.server.Server.handle"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 1598,
+            "function": "org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 753,
+            "function": "org.eclipse.jetty.server.HttpChannel.dispatch"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 501,
+            "function": "org.eclipse.jetty.server.HttpChannel.handle"
+          },
+          {
+            "file": "HttpConnection.java",
+            "line": 287,
+            "function": "org.eclipse.jetty.server.HttpConnection.onFillable"
+          },
+          {
+            "file": "AbstractConnection.java",
+            "line": 314,
+            "function": "org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded"
+          },
+          {
+            "file": "FillInterest.java",
+            "line": 100,
+            "function": "org.eclipse.jetty.io.FillInterest.fillable"
+          },
+          {
+            "file": "SelectableChannelEndPoint.java",
+            "line": 53,
+            "function": "org.eclipse.jetty.io.SelectableChannelEndPoint$1.run"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 421,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 390,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 277,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 199,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run"
+          },
+          {
+            "file": "ReservedThreadExecutor.java",
+            "line": 411,
+            "function": "org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 969,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool.runJob"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 1194,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 1149,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run"
+          },
+          {
+            "file": "Thread.java",
+            "line": 840,
+            "function": "java.lang.Thread.run"
+          },
+          {
+            "file": "CausedBy",
+            "line": 0,
+            "function": "Cause: com.dataiku.dip.server.controllers.NotFoundException: Cluster does not exist: fe-sandbox-cluster"
+          },
+          {
+            "file": "FilesBasedClustersDAO.java",
+            "line": 59,
+            "function": "com.dataiku.dip.dao.impl.FilesBasedClustersDAO.getMandatory"
+          },
+          {
+            "file": "FilesBasedClustersDAO.java",
+            "line": 53,
+            "function": "com.dataiku.dip.dao.impl.FilesBasedClustersDAO.getMandatoryUnsafe"
+          },
+          {
+            "file": "ClustersService.java",
+            "line": 138,
+            "function": "com.dataiku.dip.cluster.ClustersService.getMandatoryUnsafe"
+          },
+          {
+            "file": "PermissionsService.java",
+            "line": 488,
+            "function": "com.dataiku.dip.security.PermissionsService.hasClusterPrivilege"
+          },
+          {
+            "file": "PermissionsService.java",
+            "line": 846,
+            "function": "com.dataiku.dip.security.PermissionsService.checkClusterPrivileges"
+          },
+          {
+            "file": "PublicAPIClustersController.java",
+            "line": 83,
+            "function": "com.dataiku.dip.server.api.admin.PublicAPIClustersController.get"
+          },
+          {
+            "file": "\u003cgenerated\u003e",
+            "line": -1,
+            "function": "com.dataiku.dip.server.api.admin.PublicAPIClustersController$$FastClassBySpringCGLIB$$99767f7d.invoke"
+          },
+          {
+            "file": "MethodProxy.java",
+            "line": 218,
+            "function": "org.springframework.cglib.proxy.MethodProxy.invoke"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 792,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 163,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "MethodInvocationProceedingJoinPoint.java",
+            "line": 89,
+            "function": "org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed"
+          },
+          {
+            "file": "AuditedCallAspect.java",
+            "line": 62,
+            "function": "com.dataiku.dip.server.controllers.AuditedCallAspect.doCall"
+          },
+          {
+            "line": -1,
+            "function": "jdk.internal.reflect.GeneratedMethodAccessor51.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 634,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 624,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod"
+          },
+          {
+            "file": "AspectJAroundAdvice.java",
+            "line": 72,
+            "function": "org.springframework.aop.aspectj.AspectJAroundAdvice.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 175,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "MethodInvocationProceedingJoinPoint.java",
+            "line": 89,
+            "function": "org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed"
+          },
+          {
+            "file": "CallTracingAspect.java",
+            "line": 86,
+            "function": "com.dataiku.dip.server.controllers.CallTracingAspect.doCall"
+          },
+          {
+            "line": -1,
+            "function": "jdk.internal.reflect.GeneratedMethodAccessor49.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 634,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 624,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod"
+          },
+          {
+            "file": "AspectJAroundAdvice.java",
+            "line": 72,
+            "function": "org.springframework.aop.aspectj.AspectJAroundAdvice.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 175,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "ExposeInvocationInterceptor.java",
+            "line": 97,
+            "function": "org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 186,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 707,
+            "function": "org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept"
+          },
+          {
+            "file": "\u003cgenerated\u003e",
+            "line": -1,
+            "function": "com.dataiku.dip.server.api.admin.PublicAPIClustersController$$EnhancerBySpringCGLIB$$ff55f8ae.get"
+          },
+          {
+            "file": "NativeMethodAccessorImpl.java",
+            "line": -2,
+            "function": "jdk.internal.reflect.NativeMethodAccessorImpl.invoke0"
+          },
+          {
+            "file": "NativeMethodAccessorImpl.java",
+            "line": 77,
+            "function": "jdk.internal.reflect.NativeMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "InvocableHandlerMethod.java",
+            "line": 205,
+            "function": "org.springframework.web.method.support.InvocableHandlerMethod.doInvoke"
+          },
+          {
+            "file": "InvocableHandlerMethod.java",
+            "line": 150,
+            "function": "org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest"
+          },
+          {
+            "file": "ServletInvocableHandlerMethod.java",
+            "line": 117,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle"
+          },
+          {
+            "file": "RequestMappingHandlerAdapter.java",
+            "line": 903,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod"
+          },
+          {
+            "file": "RequestMappingHandlerAdapter.java",
+            "line": 809,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal"
+          },
+          {
+            "file": "AbstractHandlerMethodAdapter.java",
+            "line": 87,
+            "function": "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle"
+          },
+          {
+            "file": "DispatcherServlet.java",
+            "line": 1072,
+            "function": "org.springframework.web.servlet.DispatcherServlet.doDispatch"
+          },
+          {
+            "file": "DKUDispatcherServlet.java",
+            "line": 60,
+            "function": "com.dataiku.dip.server.controllers.DKUDispatcherServlet.doDispatch"
+          },
+          {
+            "file": "DispatcherServlet.java",
+            "line": 965,
+            "function": "org.springframework.web.servlet.DispatcherServlet.doService"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 1006,
+            "function": "org.springframework.web.servlet.FrameworkServlet.processRequest"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 898,
+            "function": "org.springframework.web.servlet.FrameworkServlet.doGet"
+          },
+          {
+            "file": "HttpServlet.java",
+            "line": 687,
+            "function": "javax.servlet.http.HttpServlet.service"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 883,
+            "function": "org.springframework.web.servlet.FrameworkServlet.service"
+          },
+          {
+            "file": "HttpServlet.java",
+            "line": 790,
+            "function": "javax.servlet.http.HttpServlet.service"
+          },
+          {
+            "file": "ServletHolder.java",
+            "line": 1419,
+            "function": "org.eclipse.jetty.servlet.ServletHolder$NotAsync.service"
+          },
+          {
+            "file": "ServletHolder.java",
+            "line": 764,
+            "function": "org.eclipse.jetty.servlet.ServletHolder.handle"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1665,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter"
+          },
+          {
+            "file": "CorsFilter.java",
+            "line": 47,
+            "function": "com.dataiku.dip.server.CorsFilter.doFilterInternal"
+          },
+          {
+            "file": "OncePerRequestFilter.java",
+            "line": 117,
+            "function": "org.springframework.web.filter.OncePerRequestFilter.doFilter"
+          },
+          {
+            "file": "DelegatingFilterProxy.java",
+            "line": 354,
+            "function": "org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate"
+          },
+          {
+            "file": "DelegatingFilterProxy.java",
+            "line": 267,
+            "function": "org.springframework.web.filter.DelegatingFilterProxy.doFilter"
+          },
+          {
+            "file": "FilterHolder.java",
+            "line": 202,
+            "function": "org.eclipse.jetty.servlet.FilterHolder.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1635,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter"
+          },
+          {
+            "file": "ResourceFilter.java",
+            "line": 33,
+            "function": "com.dataiku.dip.shaker.server.ResourceFilter.doFilter"
+          },
+          {
+            "file": "FilterHolder.java",
+            "line": 210,
+            "function": "org.eclipse.jetty.servlet.FilterHolder.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1635,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 527,
+            "function": "org.eclipse.jetty.servlet.ServletHandler.doHandle"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 221,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextHandle"
+          },
+          {
+            "file": "ContextHandler.java",
+            "line": 1384,
+            "function": "org.eclipse.jetty.server.handler.ContextHandler.doHandle"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 176,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextScope"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 484,
+            "function": "org.eclipse.jetty.servlet.ServletHandler.doScope"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 174,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextScope"
+          },
+          {
+            "file": "ContextHandler.java",
+            "line": 1306,
+            "function": "org.eclipse.jetty.server.handler.ContextHandler.doScope"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 129,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.handle"
+          },
+          {
+            "file": "HandlerWrapper.java",
+            "line": 122,
+            "function": "org.eclipse.jetty.server.handler.HandlerWrapper.handle"
+          },
+          {
+            "file": "Server.java",
+            "line": 563,
+            "function": "org.eclipse.jetty.server.Server.handle"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 1598,
+            "function": "org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 753,
+            "function": "org.eclipse.jetty.server.HttpChannel.dispatch"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 501,
+            "function": "org.eclipse.jetty.server.HttpChannel.handle"
+          },
+          {
+            "file": "HttpConnection.java",
+            "line": 287,
+            "function": "org.eclipse.jetty.server.HttpConnection.onFillable"
+          },
+          {
+            "file": "AbstractConnection.java",
+            "line": 314,
+            "function": "org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded"
+          },
+          {
+            "file": "FillInterest.java",
+            "line": 100,
+            "function": "org.eclipse.jetty.io.FillInterest.fillable"
+          },
+          {
+            "file": "SelectableChannelEndPoint.java",
+            "line": 53,
+            "function": "org.eclipse.jetty.io.SelectableChannelEndPoint$1.run"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 421,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 390,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 277,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 199,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run"
+          },
+          {
+            "file": "ReservedThreadExecutor.java",
+            "line": 411,
+            "function": "org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 969,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool.runJob"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 1194,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 1149,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run"
+          },
+          {
+            "file": "Thread.java",
+            "line": 840,
+            "function": "java.lang.Thread.run"
+          }
+        ]
+      },
+      "payload": {},
+      "message": "Public API call failure: /dip/publicapi/admin/clusters/fe-sandbox-cluster"
+    },
+    {
+      "rollbarIt": true,
+      "time": "2024-10-19-10-24-56-675",
+      "exception": {
+        "errorType": "com.dataiku.dip.server.controllers.NotFoundException",
+        "message": "Public API call failure: /dip/publicapi/api-deployer/infras/fe-sandbox: API node deployment infrastructure does not exist: fe-sandbox",
+        "detailedMessage": "API node deployment infrastructure does not exist: fe-sandbox",
+        "detailedMessageHTML": "\u003cspan\u003e\u003cspan class\u003d\"err-msg\"\u003eAPI node deployment infrastructure does not exist: fe-sandbox\u003c/span\u003e\u003c/span\u003e",
+        "stackTraceStr": "com.dataiku.dip.server.controllers.NotFoundException: API node deployment infrastructure does not exist: fe-sandbox\n\tat com.dataiku.dip.dao.AbstractGlobalDAO.getMandatory(AbstractGlobalDAO.java:53)\n\tat com.dataiku.dip.dao.AbstractGlobalDAO.getMandatoryUnsafe(AbstractGlobalDAO.java:47)\n\tat com.dataiku.dip.apideployer.infra.AbstractInfrasService.getLightStatusUnsafeOrNull(AbstractInfrasService.java:67)\n\tat com.dataiku.dip.apideployer.infra.AbstractInfrasService.getLightStatusUnsafe_Check(AbstractInfrasService.java:81)\n\tat com.dataiku.dip.server.api.PublicAPIDeployerControllerBase.getInfraLightStatus(PublicAPIDeployerControllerBase.java:216)\n\tat com.dataiku.dip.server.api.PublicAPIAPIDeployerController.getInfraLightStatus(PublicAPIAPIDeployerController.java:479)\n\tat com.dataiku.dip.server.api.PublicAPIAPIDeployerController$$FastClassBySpringCGLIB$$1e209d03.invoke(\u003cgenerated\u003e)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\tat com.dataiku.dip.server.controllers.AuditedCallAspect.doCall(AuditedCallAspect.java:62)\n\tat jdk.internal.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\tat com.dataiku.dip.server.controllers.CallTracingAspect.doCall(CallTracingAspect.java:86)\n\tat jdk.internal.reflect.GeneratedMethodAccessor49.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)\n\tat com.dataiku.dip.server.api.PublicAPIAPIDeployerController$$EnhancerBySpringCGLIB$$a977f500.getInfraLightStatus(\u003cgenerated\u003e)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:903)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:809)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)\n\tat com.dataiku.dip.server.controllers.DKUDispatcherServlet.doDispatch(DKUDispatcherServlet.java:60)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n\tat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:687)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\n\tat org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)\n\tat org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)\n\tat org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)\n\tat com.dataiku.dip.server.CorsFilter.doFilterInternal(CorsFilter.java:47)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)\n\tat org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)\n\tat org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)\n\tat com.dataiku.dip.shaker.server.ResourceFilter.doFilter(ResourceFilter.java:33)\n\tat org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)\n\tat org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)\n\tat org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1384)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)\n\tat org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1306)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)\n\tat org.eclipse.jetty.server.Server.handle(Server.java:563)\n\tat org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)\n\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)\n\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)\n\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)\n\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)\n\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)\n\tat org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)\n\tat org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+        "stackTrace": [
+          {
+            "file": "AbstractGlobalDAO.java",
+            "line": 53,
+            "function": "com.dataiku.dip.dao.AbstractGlobalDAO.getMandatory"
+          },
+          {
+            "file": "AbstractGlobalDAO.java",
+            "line": 47,
+            "function": "com.dataiku.dip.dao.AbstractGlobalDAO.getMandatoryUnsafe"
+          },
+          {
+            "file": "AbstractInfrasService.java",
+            "line": 67,
+            "function": "com.dataiku.dip.apideployer.infra.AbstractInfrasService.getLightStatusUnsafeOrNull"
+          },
+          {
+            "file": "AbstractInfrasService.java",
+            "line": 81,
+            "function": "com.dataiku.dip.apideployer.infra.AbstractInfrasService.getLightStatusUnsafe_Check"
+          },
+          {
+            "file": "PublicAPIDeployerControllerBase.java",
+            "line": 216,
+            "function": "com.dataiku.dip.server.api.PublicAPIDeployerControllerBase.getInfraLightStatus"
+          },
+          {
+            "file": "PublicAPIAPIDeployerController.java",
+            "line": 479,
+            "function": "com.dataiku.dip.server.api.PublicAPIAPIDeployerController.getInfraLightStatus"
+          },
+          {
+            "file": "\u003cgenerated\u003e",
+            "line": -1,
+            "function": "com.dataiku.dip.server.api.PublicAPIAPIDeployerController$$FastClassBySpringCGLIB$$1e209d03.invoke"
+          },
+          {
+            "file": "MethodProxy.java",
+            "line": 218,
+            "function": "org.springframework.cglib.proxy.MethodProxy.invoke"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 792,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 163,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "MethodInvocationProceedingJoinPoint.java",
+            "line": 89,
+            "function": "org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed"
+          },
+          {
+            "file": "AuditedCallAspect.java",
+            "line": 62,
+            "function": "com.dataiku.dip.server.controllers.AuditedCallAspect.doCall"
+          },
+          {
+            "line": -1,
+            "function": "jdk.internal.reflect.GeneratedMethodAccessor51.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 634,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 624,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod"
+          },
+          {
+            "file": "AspectJAroundAdvice.java",
+            "line": 72,
+            "function": "org.springframework.aop.aspectj.AspectJAroundAdvice.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 175,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "MethodInvocationProceedingJoinPoint.java",
+            "line": 89,
+            "function": "org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed"
+          },
+          {
+            "file": "CallTracingAspect.java",
+            "line": 86,
+            "function": "com.dataiku.dip.server.controllers.CallTracingAspect.doCall"
+          },
+          {
+            "line": -1,
+            "function": "jdk.internal.reflect.GeneratedMethodAccessor49.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 634,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 624,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod"
+          },
+          {
+            "file": "AspectJAroundAdvice.java",
+            "line": 72,
+            "function": "org.springframework.aop.aspectj.AspectJAroundAdvice.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 175,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "ExposeInvocationInterceptor.java",
+            "line": 97,
+            "function": "org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 186,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 707,
+            "function": "org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept"
+          },
+          {
+            "file": "\u003cgenerated\u003e",
+            "line": -1,
+            "function": "com.dataiku.dip.server.api.PublicAPIAPIDeployerController$$EnhancerBySpringCGLIB$$a977f500.getInfraLightStatus"
+          },
+          {
+            "file": "NativeMethodAccessorImpl.java",
+            "line": -2,
+            "function": "jdk.internal.reflect.NativeMethodAccessorImpl.invoke0"
+          },
+          {
+            "file": "NativeMethodAccessorImpl.java",
+            "line": 77,
+            "function": "jdk.internal.reflect.NativeMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "InvocableHandlerMethod.java",
+            "line": 205,
+            "function": "org.springframework.web.method.support.InvocableHandlerMethod.doInvoke"
+          },
+          {
+            "file": "InvocableHandlerMethod.java",
+            "line": 150,
+            "function": "org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest"
+          },
+          {
+            "file": "ServletInvocableHandlerMethod.java",
+            "line": 117,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle"
+          },
+          {
+            "file": "RequestMappingHandlerAdapter.java",
+            "line": 903,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod"
+          },
+          {
+            "file": "RequestMappingHandlerAdapter.java",
+            "line": 809,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal"
+          },
+          {
+            "file": "AbstractHandlerMethodAdapter.java",
+            "line": 87,
+            "function": "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle"
+          },
+          {
+            "file": "DispatcherServlet.java",
+            "line": 1072,
+            "function": "org.springframework.web.servlet.DispatcherServlet.doDispatch"
+          },
+          {
+            "file": "DKUDispatcherServlet.java",
+            "line": 60,
+            "function": "com.dataiku.dip.server.controllers.DKUDispatcherServlet.doDispatch"
+          },
+          {
+            "file": "DispatcherServlet.java",
+            "line": 965,
+            "function": "org.springframework.web.servlet.DispatcherServlet.doService"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 1006,
+            "function": "org.springframework.web.servlet.FrameworkServlet.processRequest"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 898,
+            "function": "org.springframework.web.servlet.FrameworkServlet.doGet"
+          },
+          {
+            "file": "HttpServlet.java",
+            "line": 687,
+            "function": "javax.servlet.http.HttpServlet.service"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 883,
+            "function": "org.springframework.web.servlet.FrameworkServlet.service"
+          },
+          {
+            "file": "HttpServlet.java",
+            "line": 790,
+            "function": "javax.servlet.http.HttpServlet.service"
+          },
+          {
+            "file": "ServletHolder.java",
+            "line": 1419,
+            "function": "org.eclipse.jetty.servlet.ServletHolder$NotAsync.service"
+          },
+          {
+            "file": "ServletHolder.java",
+            "line": 764,
+            "function": "org.eclipse.jetty.servlet.ServletHolder.handle"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1665,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter"
+          },
+          {
+            "file": "CorsFilter.java",
+            "line": 47,
+            "function": "com.dataiku.dip.server.CorsFilter.doFilterInternal"
+          },
+          {
+            "file": "OncePerRequestFilter.java",
+            "line": 117,
+            "function": "org.springframework.web.filter.OncePerRequestFilter.doFilter"
+          },
+          {
+            "file": "DelegatingFilterProxy.java",
+            "line": 354,
+            "function": "org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate"
+          },
+          {
+            "file": "DelegatingFilterProxy.java",
+            "line": 267,
+            "function": "org.springframework.web.filter.DelegatingFilterProxy.doFilter"
+          },
+          {
+            "file": "FilterHolder.java",
+            "line": 202,
+            "function": "org.eclipse.jetty.servlet.FilterHolder.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1635,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter"
+          },
+          {
+            "file": "ResourceFilter.java",
+            "line": 33,
+            "function": "com.dataiku.dip.shaker.server.ResourceFilter.doFilter"
+          },
+          {
+            "file": "FilterHolder.java",
+            "line": 210,
+            "function": "org.eclipse.jetty.servlet.FilterHolder.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1635,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 527,
+            "function": "org.eclipse.jetty.servlet.ServletHandler.doHandle"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 221,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextHandle"
+          },
+          {
+            "file": "ContextHandler.java",
+            "line": 1384,
+            "function": "org.eclipse.jetty.server.handler.ContextHandler.doHandle"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 176,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextScope"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 484,
+            "function": "org.eclipse.jetty.servlet.ServletHandler.doScope"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 174,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextScope"
+          },
+          {
+            "file": "ContextHandler.java",
+            "line": 1306,
+            "function": "org.eclipse.jetty.server.handler.ContextHandler.doScope"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 129,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.handle"
+          },
+          {
+            "file": "HandlerWrapper.java",
+            "line": 122,
+            "function": "org.eclipse.jetty.server.handler.HandlerWrapper.handle"
+          },
+          {
+            "file": "Server.java",
+            "line": 563,
+            "function": "org.eclipse.jetty.server.Server.handle"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 1598,
+            "function": "org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 753,
+            "function": "org.eclipse.jetty.server.HttpChannel.dispatch"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 501,
+            "function": "org.eclipse.jetty.server.HttpChannel.handle"
+          },
+          {
+            "file": "HttpConnection.java",
+            "line": 287,
+            "function": "org.eclipse.jetty.server.HttpConnection.onFillable"
+          },
+          {
+            "file": "AbstractConnection.java",
+            "line": 314,
+            "function": "org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded"
+          },
+          {
+            "file": "FillInterest.java",
+            "line": 100,
+            "function": "org.eclipse.jetty.io.FillInterest.fillable"
+          },
+          {
+            "file": "SelectableChannelEndPoint.java",
+            "line": 53,
+            "function": "org.eclipse.jetty.io.SelectableChannelEndPoint$1.run"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 421,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 390,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 277,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 199,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run"
+          },
+          {
+            "file": "ReservedThreadExecutor.java",
+            "line": 411,
+            "function": "org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 969,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool.runJob"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 1194,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 1149,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run"
+          },
+          {
+            "file": "Thread.java",
+            "line": 840,
+            "function": "java.lang.Thread.run"
+          }
+        ]
+      },
+      "payload": {},
+      "message": "Public API call failure: /dip/publicapi/api-deployer/infras/fe-sandbox"
+    },
+    {
+      "rollbarIt": true,
+      "time": "2024-10-19-10-25-00-127",
+      "exception": {
+        "errorType": "java.lang.IllegalArgumentException",
+        "message": "Public API call failure: /dip/publicapi/admin/connections/fedemo-snowflake: Connection \u0027fedemo-snowflake\u0027 does not exist",
+        "detailedMessage": "Connection \u0027fedemo-snowflake\u0027 does not exist",
+        "detailedMessageHTML": "\u003cspan\u003e\u003cspan class\u003d\"err-msg\"\u003eConnection \u0027fedemo-snowflake\u0027 does not exist\u003c/span\u003e\u003c/span\u003e",
+        "stackTraceStr": "java.lang.IllegalArgumentException: Connection \u0027fedemo-snowflake\u0027 does not exist\n\tat com.dataiku.dip.utils.ErrorContext.iaef(ErrorContext.java:145)\n\tat com.dataiku.dip.connections.ConnectionsDAO.getMandatoryConnection(ConnectionsDAO.java:213)\n\tat com.dataiku.dip.server.api.admin.PublicAPIConnectionsController.getConnection(PublicAPIConnectionsController.java:64)\n\tat com.dataiku.dip.server.api.admin.PublicAPIConnectionsController$$FastClassBySpringCGLIB$$f39f2c89.invoke(\u003cgenerated\u003e)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\tat com.dataiku.dip.server.controllers.AuditedCallAspect.doCall(AuditedCallAspect.java:62)\n\tat jdk.internal.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\tat com.dataiku.dip.server.controllers.CallTracingAspect.doCall(CallTracingAspect.java:86)\n\tat jdk.internal.reflect.GeneratedMethodAccessor49.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)\n\tat com.dataiku.dip.server.api.admin.PublicAPIConnectionsController$$EnhancerBySpringCGLIB$$ad6e8752.getConnection(\u003cgenerated\u003e)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:903)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:809)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)\n\tat com.dataiku.dip.server.controllers.DKUDispatcherServlet.doDispatch(DKUDispatcherServlet.java:60)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n\tat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:687)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\n\tat org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)\n\tat org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)\n\tat org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)\n\tat com.dataiku.dip.server.CorsFilter.doFilterInternal(CorsFilter.java:47)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)\n\tat org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)\n\tat org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)\n\tat com.dataiku.dip.shaker.server.ResourceFilter.doFilter(ResourceFilter.java:33)\n\tat org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)\n\tat org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)\n\tat org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1384)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)\n\tat org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1306)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)\n\tat org.eclipse.jetty.server.Server.handle(Server.java:563)\n\tat org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)\n\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)\n\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)\n\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)\n\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)\n\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)\n\tat org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)\n\tat org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)\n\tat org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+        "stackTrace": [
+          {
+            "file": "ErrorContext.java",
+            "line": 145,
+            "function": "com.dataiku.dip.utils.ErrorContext.iaef"
+          },
+          {
+            "file": "ConnectionsDAO.java",
+            "line": 213,
+            "function": "com.dataiku.dip.connections.ConnectionsDAO.getMandatoryConnection"
+          },
+          {
+            "file": "PublicAPIConnectionsController.java",
+            "line": 64,
+            "function": "com.dataiku.dip.server.api.admin.PublicAPIConnectionsController.getConnection"
+          },
+          {
+            "file": "\u003cgenerated\u003e",
+            "line": -1,
+            "function": "com.dataiku.dip.server.api.admin.PublicAPIConnectionsController$$FastClassBySpringCGLIB$$f39f2c89.invoke"
+          },
+          {
+            "file": "MethodProxy.java",
+            "line": 218,
+            "function": "org.springframework.cglib.proxy.MethodProxy.invoke"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 792,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 163,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "MethodInvocationProceedingJoinPoint.java",
+            "line": 89,
+            "function": "org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed"
+          },
+          {
+            "file": "AuditedCallAspect.java",
+            "line": 62,
+            "function": "com.dataiku.dip.server.controllers.AuditedCallAspect.doCall"
+          },
+          {
+            "line": -1,
+            "function": "jdk.internal.reflect.GeneratedMethodAccessor51.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 634,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 624,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod"
+          },
+          {
+            "file": "AspectJAroundAdvice.java",
+            "line": 72,
+            "function": "org.springframework.aop.aspectj.AspectJAroundAdvice.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 175,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "MethodInvocationProceedingJoinPoint.java",
+            "line": 89,
+            "function": "org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed"
+          },
+          {
+            "file": "CallTracingAspect.java",
+            "line": 86,
+            "function": "com.dataiku.dip.server.controllers.CallTracingAspect.doCall"
+          },
+          {
+            "line": -1,
+            "function": "jdk.internal.reflect.GeneratedMethodAccessor49.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 634,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs"
+          },
+          {
+            "file": "AbstractAspectJAdvice.java",
+            "line": 624,
+            "function": "org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod"
+          },
+          {
+            "file": "AspectJAroundAdvice.java",
+            "line": 72,
+            "function": "org.springframework.aop.aspectj.AspectJAroundAdvice.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 175,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "ExposeInvocationInterceptor.java",
+            "line": 97,
+            "function": "org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke"
+          },
+          {
+            "file": "ReflectiveMethodInvocation.java",
+            "line": 186,
+            "function": "org.springframework.aop.framework.ReflectiveMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 762,
+            "function": "org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed"
+          },
+          {
+            "file": "CglibAopProxy.java",
+            "line": 707,
+            "function": "org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept"
+          },
+          {
+            "file": "\u003cgenerated\u003e",
+            "line": -1,
+            "function": "com.dataiku.dip.server.api.admin.PublicAPIConnectionsController$$EnhancerBySpringCGLIB$$ad6e8752.getConnection"
+          },
+          {
+            "file": "NativeMethodAccessorImpl.java",
+            "line": -2,
+            "function": "jdk.internal.reflect.NativeMethodAccessorImpl.invoke0"
+          },
+          {
+            "file": "NativeMethodAccessorImpl.java",
+            "line": 77,
+            "function": "jdk.internal.reflect.NativeMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "DelegatingMethodAccessorImpl.java",
+            "line": 43,
+            "function": "jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke"
+          },
+          {
+            "file": "Method.java",
+            "line": 569,
+            "function": "java.lang.reflect.Method.invoke"
+          },
+          {
+            "file": "InvocableHandlerMethod.java",
+            "line": 205,
+            "function": "org.springframework.web.method.support.InvocableHandlerMethod.doInvoke"
+          },
+          {
+            "file": "InvocableHandlerMethod.java",
+            "line": 150,
+            "function": "org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest"
+          },
+          {
+            "file": "ServletInvocableHandlerMethod.java",
+            "line": 117,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle"
+          },
+          {
+            "file": "RequestMappingHandlerAdapter.java",
+            "line": 903,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod"
+          },
+          {
+            "file": "RequestMappingHandlerAdapter.java",
+            "line": 809,
+            "function": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal"
+          },
+          {
+            "file": "AbstractHandlerMethodAdapter.java",
+            "line": 87,
+            "function": "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle"
+          },
+          {
+            "file": "DispatcherServlet.java",
+            "line": 1072,
+            "function": "org.springframework.web.servlet.DispatcherServlet.doDispatch"
+          },
+          {
+            "file": "DKUDispatcherServlet.java",
+            "line": 60,
+            "function": "com.dataiku.dip.server.controllers.DKUDispatcherServlet.doDispatch"
+          },
+          {
+            "file": "DispatcherServlet.java",
+            "line": 965,
+            "function": "org.springframework.web.servlet.DispatcherServlet.doService"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 1006,
+            "function": "org.springframework.web.servlet.FrameworkServlet.processRequest"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 898,
+            "function": "org.springframework.web.servlet.FrameworkServlet.doGet"
+          },
+          {
+            "file": "HttpServlet.java",
+            "line": 687,
+            "function": "javax.servlet.http.HttpServlet.service"
+          },
+          {
+            "file": "FrameworkServlet.java",
+            "line": 883,
+            "function": "org.springframework.web.servlet.FrameworkServlet.service"
+          },
+          {
+            "file": "HttpServlet.java",
+            "line": 790,
+            "function": "javax.servlet.http.HttpServlet.service"
+          },
+          {
+            "file": "ServletHolder.java",
+            "line": 1419,
+            "function": "org.eclipse.jetty.servlet.ServletHolder$NotAsync.service"
+          },
+          {
+            "file": "ServletHolder.java",
+            "line": 764,
+            "function": "org.eclipse.jetty.servlet.ServletHolder.handle"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1665,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter"
+          },
+          {
+            "file": "CorsFilter.java",
+            "line": 47,
+            "function": "com.dataiku.dip.server.CorsFilter.doFilterInternal"
+          },
+          {
+            "file": "OncePerRequestFilter.java",
+            "line": 117,
+            "function": "org.springframework.web.filter.OncePerRequestFilter.doFilter"
+          },
+          {
+            "file": "DelegatingFilterProxy.java",
+            "line": 354,
+            "function": "org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate"
+          },
+          {
+            "file": "DelegatingFilterProxy.java",
+            "line": 267,
+            "function": "org.springframework.web.filter.DelegatingFilterProxy.doFilter"
+          },
+          {
+            "file": "FilterHolder.java",
+            "line": 202,
+            "function": "org.eclipse.jetty.servlet.FilterHolder.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1635,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter"
+          },
+          {
+            "file": "ResourceFilter.java",
+            "line": 33,
+            "function": "com.dataiku.dip.shaker.server.ResourceFilter.doFilter"
+          },
+          {
+            "file": "FilterHolder.java",
+            "line": 210,
+            "function": "org.eclipse.jetty.servlet.FilterHolder.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 1635,
+            "function": "org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 527,
+            "function": "org.eclipse.jetty.servlet.ServletHandler.doHandle"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 221,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextHandle"
+          },
+          {
+            "file": "ContextHandler.java",
+            "line": 1384,
+            "function": "org.eclipse.jetty.server.handler.ContextHandler.doHandle"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 176,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextScope"
+          },
+          {
+            "file": "ServletHandler.java",
+            "line": 484,
+            "function": "org.eclipse.jetty.servlet.ServletHandler.doScope"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 174,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.nextScope"
+          },
+          {
+            "file": "ContextHandler.java",
+            "line": 1306,
+            "function": "org.eclipse.jetty.server.handler.ContextHandler.doScope"
+          },
+          {
+            "file": "ScopedHandler.java",
+            "line": 129,
+            "function": "org.eclipse.jetty.server.handler.ScopedHandler.handle"
+          },
+          {
+            "file": "HandlerWrapper.java",
+            "line": 122,
+            "function": "org.eclipse.jetty.server.handler.HandlerWrapper.handle"
+          },
+          {
+            "file": "Server.java",
+            "line": 563,
+            "function": "org.eclipse.jetty.server.Server.handle"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 1598,
+            "function": "org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 753,
+            "function": "org.eclipse.jetty.server.HttpChannel.dispatch"
+          },
+          {
+            "file": "HttpChannel.java",
+            "line": 501,
+            "function": "org.eclipse.jetty.server.HttpChannel.handle"
+          },
+          {
+            "file": "HttpConnection.java",
+            "line": 287,
+            "function": "org.eclipse.jetty.server.HttpConnection.onFillable"
+          },
+          {
+            "file": "AbstractConnection.java",
+            "line": 314,
+            "function": "org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded"
+          },
+          {
+            "file": "FillInterest.java",
+            "line": 100,
+            "function": "org.eclipse.jetty.io.FillInterest.fillable"
+          },
+          {
+            "file": "SelectableChannelEndPoint.java",
+            "line": 53,
+            "function": "org.eclipse.jetty.io.SelectableChannelEndPoint$1.run"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 421,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 390,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 277,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce"
+          },
+          {
+            "file": "AdaptiveExecutionStrategy.java",
+            "line": 199,
+            "function": "org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run"
+          },
+          {
+            "file": "ReservedThreadExecutor.java",
+            "line": 411,
+            "function": "org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 969,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool.runJob"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 1194,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob"
+          },
+          {
+            "file": "QueuedThreadPool.java",
+            "line": 1149,
+            "function": "org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run"
+          },
+          {
+            "file": "Thread.java",
+            "line": 840,
+            "function": "java.lang.Thread.run"
+          }
+        ]
+      },
+      "payload": {},
+      "message": "Public API call failure: /dip/publicapi/admin/connections/fedemo-snowflake"
+    }
+  ]
+}

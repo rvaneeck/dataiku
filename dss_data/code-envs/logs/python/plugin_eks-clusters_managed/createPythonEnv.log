@@ -1,0 +1,227 @@
+
+*********************************************************
+*********************************************************
+*
+* create empty env
+*
+* <AC:api:dkuimk-2gdXFvS9xFS7j0OC> at 2024/10/19 10:23:48.886
+*
+* command : /opt/dataiku-dss-13.1.2/scripts/_create-virtualenv.sh /data/dataiku/dss_data/bin/python -p python3.9 /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed
+*
+*********************************************************
+*********************************************************
+created virtual environment CPython3.9.19.final.0-64 in 477ms
+  creator CPython3Posix(dest=/data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/data/dataiku/.local/share/virtualenv)
+    added seed packages: pip==23.1, setuptools==67.6.1, wheel==0.40.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+*********************************************************
+*********************************************************
+*
+* list packages
+*
+* <AC:api:dkuimk-2gdXFvS9xFS7j0OC> at 2024/10/19 10:23:50.813
+*
+* command : /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/bin/python -m pip freeze -l
+*
+*********************************************************
+*********************************************************
+Installing from Pip requirements:
+
+pandas>=1.3,<1.4
+numpy<1.24
+python-dateutil >=2.8.2,<3
+urllib3<2
+requests<3
+
+
+*********************************************************
+*********************************************************
+*
+* install packages
+*
+* <AC:api:dkuimk-2gdXFvS9xFS7j0OC> at 2024/10/19 10:23:52.261
+*
+* command : /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/bin/python -m pip install --upgrade -r /data/dataiku/dss_data/tmp/pip-requirements-install/req428188821043122522.txt
+*
+*********************************************************
+*********************************************************
+Collecting pandas<1.4,>=1.3 (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req428188821043122522.txt (line 2))
+  Downloading pandas-1.3.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.5/11.5 MB 36.0 MB/s eta 0:00:00
+Collecting numpy<1.24 (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req428188821043122522.txt (line 3))
+  Downloading numpy-1.23.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.1/17.1 MB 29.0 MB/s eta 0:00:00
+Collecting python-dateutil<3,>=2.8.2 (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req428188821043122522.txt (line 4))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 5.0 MB/s eta 0:00:00
+Collecting urllib3<2 (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req428188821043122522.txt (line 5))
+  Downloading urllib3-1.26.20-py2.py3-none-any.whl (144 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 2.8 MB/s eta 0:00:00
+Collecting requests<3 (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req428188821043122522.txt (line 6))
+  Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 kB 941.8 kB/s eta 0:00:00
+Collecting pytz>=2017.3 (from pandas<1.4,>=1.3->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req428188821043122522.txt (line 2))
+  Downloading pytz-2024.2-py2.py3-none-any.whl (508 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 508.0/508.0 kB 12.6 MB/s eta 0:00:00
+Collecting six>=1.5 (from python-dateutil<3,>=2.8.2->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req428188821043122522.txt (line 4))
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting charset-normalizer<4,>=2 (from requests<3->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req428188821043122522.txt (line 6))
+  Downloading charset_normalizer-3.4.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.9/144.9 kB 2.2 MB/s eta 0:00:00
+Collecting idna<4,>=2.5 (from requests<3->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req428188821043122522.txt (line 6))
+  Downloading idna-3.10-py3-none-any.whl (70 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.4/70.4 kB 966.1 kB/s eta 0:00:00
+Collecting certifi>=2017.4.17 (from requests<3->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req428188821043122522.txt (line 6))
+  Downloading certifi-2024.8.30-py3-none-any.whl (167 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 167.3/167.3 kB 2.2 MB/s eta 0:00:00
+Installing collected packages: pytz, urllib3, six, numpy, idna, charset-normalizer, certifi, requests, python-dateutil, pandas
+Successfully installed certifi-2024.8.30 charset-normalizer-3.4.0 idna-3.10 numpy-1.23.5 pandas-1.3.5 python-dateutil-2.9.0.post0 pytz-2024.2 requests-2.32.3 six-1.16.0 urllib3-1.26.20
+
+[notice] A new release of pip is available: 23.1 -> 24.2
+[notice] To update, run: /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/bin/python -m pip install --upgrade pip
+
+*********************************************************
+*********************************************************
+*
+* list packages
+*
+* <AC:api:dkuimk-2gdXFvS9xFS7j0OC> at 2024/10/19 10:24:16.620
+*
+* command : /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/bin/python -m pip freeze -l
+*
+*********************************************************
+*********************************************************
+certifi==2024.8.30
+charset-normalizer==3.4.0
+idna==3.10
+numpy==1.23.5
+pandas==1.3.5
+python-dateutil==2.9.0.post0
+pytz==2024.2
+requests==2.32.3
+six==1.16.0
+urllib3==1.26.20
+
+*********************************************************
+*********************************************************
+*
+* list packages
+*
+* <AC:api:dkuimk-2gdXFvS9xFS7j0OC> at 2024/10/19 10:24:17.446
+*
+* command : /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/bin/python -m pip freeze -l
+*
+*********************************************************
+*********************************************************
+certifi==2024.8.30
+charset-normalizer==3.4.0
+idna==3.10
+numpy==1.23.5
+pandas==1.3.5
+python-dateutil==2.9.0.post0
+pytz==2024.2
+requests==2.32.3
+six==1.16.0
+urllib3==1.26.20
+Installing from Pip requirements:
+PyYAML
+awscli
+ipaddress==1.0.23
+boto3
+pandas>=1.3,<1.4
+numpy<1.24
+python-dateutil >=2.8.2,<3
+urllib3<2
+requests<3
+
+
+*********************************************************
+*********************************************************
+*
+* install packages
+*
+* <AC:api:dkuimk-2gdXFvS9xFS7j0OC> at 2024/10/19 10:24:18.128
+*
+* command : /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/bin/python -m pip install -r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt
+*
+*********************************************************
+*********************************************************
+Collecting PyYAML (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 1))
+  Downloading PyYAML-6.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (737 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 737.4/737.4 kB 10.5 MB/s eta 0:00:00
+Collecting awscli (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 2))
+  Downloading awscli-1.35.10-py3-none-any.whl (4.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 79.1 MB/s eta 0:00:00
+Collecting ipaddress==1.0.23 (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 3))
+  Downloading ipaddress-1.0.23-py2.py3-none-any.whl (18 kB)
+Collecting boto3 (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 4))
+  Downloading boto3-1.35.44-py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.2/139.2 kB 6.4 MB/s eta 0:00:00
+Requirement already satisfied: pandas<1.4,>=1.3 in /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/lib64/python3.9/site-packages (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 5)) (1.3.5)
+Requirement already satisfied: numpy<1.24 in /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/lib64/python3.9/site-packages (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 6)) (1.23.5)
+Requirement already satisfied: python-dateutil<3,>=2.8.2 in /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/lib/python3.9/site-packages (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 7)) (2.9.0.post0)
+Requirement already satisfied: urllib3<2 in /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/lib/python3.9/site-packages (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 8)) (1.26.20)
+Requirement already satisfied: requests<3 in /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/lib/python3.9/site-packages (from -r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 9)) (2.32.3)
+Collecting botocore==1.35.44 (from awscli->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 2))
+  Downloading botocore-1.35.44-py3-none-any.whl (12.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 55.5 MB/s eta 0:00:00
+Collecting docutils<0.17,>=0.10 (from awscli->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 2))
+  Downloading docutils-0.16-py2.py3-none-any.whl (548 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 548.2/548.2 kB 54.0 MB/s eta 0:00:00
+Collecting s3transfer<0.11.0,>=0.10.0 (from awscli->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 2))
+  Downloading s3transfer-0.10.3-py3-none-any.whl (82 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.6/82.6 kB 10.8 MB/s eta 0:00:00
+Collecting colorama<0.4.7,>=0.2.5 (from awscli->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 2))
+  Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting rsa<4.8,>=3.1.2 (from awscli->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 2))
+  Downloading rsa-4.7.2-py3-none-any.whl (34 kB)
+Collecting jmespath<2.0.0,>=0.7.1 (from botocore==1.35.44->awscli->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 2))
+  Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+Requirement already satisfied: pytz>=2017.3 in /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/lib/python3.9/site-packages (from pandas<1.4,>=1.3->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 5)) (2024.2)
+Requirement already satisfied: six>=1.5 in /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/lib/python3.9/site-packages (from python-dateutil<3,>=2.8.2->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 7)) (1.16.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/lib64/python3.9/site-packages (from requests<3->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 9)) (3.4.0)
+Requirement already satisfied: idna<4,>=2.5 in /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/lib/python3.9/site-packages (from requests<3->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 9)) (3.10)
+Requirement already satisfied: certifi>=2017.4.17 in /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/lib/python3.9/site-packages (from requests<3->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 9)) (2024.8.30)
+Collecting pyasn1>=0.1.3 (from rsa<4.8,>=3.1.2->awscli->-r /data/dataiku/dss_data/tmp/pip-requirements-install/req11351111085146432260.txt (line 2))
+  Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 7.8 MB/s eta 0:00:00
+Installing collected packages: ipaddress, PyYAML, pyasn1, jmespath, docutils, colorama, rsa, botocore, s3transfer, boto3, awscli
+Successfully installed PyYAML-6.0.2 awscli-1.35.10 boto3-1.35.44 botocore-1.35.44 colorama-0.4.6 docutils-0.16 ipaddress-1.0.23 jmespath-1.0.1 pyasn1-0.6.1 rsa-4.7.2 s3transfer-0.10.3
+
+[notice] A new release of pip is available: 23.1 -> 24.2
+[notice] To update, run: /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/bin/python -m pip install --upgrade pip
+
+*********************************************************
+*********************************************************
+*
+* list packages
+*
+* <AC:api:dkuimk-2gdXFvS9xFS7j0OC> at 2024/10/19 10:24:29.985
+*
+* command : /data/dataiku/dss_data/code-envs/python/plugin_eks-clusters_managed/bin/python -m pip freeze -l
+*
+*********************************************************
+*********************************************************
+awscli==1.35.10
+boto3==1.35.44
+botocore==1.35.44
+certifi==2024.8.30
+charset-normalizer==3.4.0
+colorama==0.4.6
+docutils==0.16
+idna==3.10
+ipaddress==1.0.23
+jmespath==1.0.1
+numpy==1.23.5
+pandas==1.3.5
+pyasn1==0.6.1
+python-dateutil==2.9.0.post0
+pytz==2024.2
+PyYAML==6.0.2
+requests==2.32.3
+rsa==4.7.2
+s3transfer==0.10.3
+six==1.16.0
+urllib3==1.26.20

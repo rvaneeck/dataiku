@@ -1,0 +1,4 @@
+#Key and value types
+#Sat Oct 19 10:23:32 UTC 2024
+valueType=com.dataiku.dip.llm.online.LLMClient$SimpleCompletionResponseOrError
+keyType=java.lang.String

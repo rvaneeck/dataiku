@@ -1,0 +1,55 @@
+*********************************************************
+Data Science Studio admin tool: 2024/10/19-10:14:59
+Command line: /data/dataiku/dss_data/bin/dssadmin install-impersonation dataiku
+DIP_HOME: /data/dataiku/dss_data
+
+[+] Using default Python for this platform: python3.9
+[+] Enabling impersonation in DSS
+[+] Creating external security directory /etc/dataiku-security/qNA8zRO2pMUXyMlJJHjeY6ey
+[+] Setting permissions on /data/dataiku/dss_data
+[+] Creating security configuration file : /etc/dataiku-security/qNA8zRO2pMUXyMlJJHjeY6ey/security-config.ini
+[+] Creating sudo execution wrapper
+[+] Installing sudoers policy file /etc/sudoers.d/dataiku-dss-dataiku-qNA8zRO2pMUXyMlJJHjeY6ey
+[+] Enabling impersonation in DSS
+Loading plugins: 
+[2024/10/19-10:15:00.892] [main] [INFO] [dku.modules]  - Opening all java modules in unnamed module @551aa95a
+[2024/10/19-10:15:00.893] [main] [INFO] [dku.modules]  - Opening java modules
+[2024/10/19-10:15:00.941] [main] [INFO] [dku.logging]  - Loading logging settings
+[2024/10/19-10:15:00.946] [main] [INFO] [dku.logging]  - Configuring additional logging settings from /opt/dataiku-dss-13.1.2/resources/logging/dku-log4j.properties
+[2024/10/19-10:15:00.967] [main] [INFO] [dku.logging]  - Configuring additional JUL logging settings from /opt/dataiku-dss-13.1.2/resources/logging/dku-log-jul.properties
+[2024/10/19-10:15:01.547] [main] [INFO] [dku.builtins]  - Loading countries geo data
+[2024/10/19-10:15:01.594] [main] [INFO] [dku.modules]  - Opening all java modules in unnamed module @551aa95a
+[2024/10/19-10:15:01.594] [main] [INFO] [dku.modules]  - Opening java modules
+[2024/10/19-10:15:01.809] [main] [INFO] [com.dataiku.dip.transactions.fs.FSyncUtils]  - Setting up fsync pool with 8 threads and CRC32 check is disabled
+[2024/10/19-10:15:01.810] [main] [INFO] [com.dataiku.dip.DKUApp]  - Reading /data/dataiku/dss_data/install.ini
+[2024/10/19-10:15:02.225] [main] [INFO] [dip.transactions]  - Transaction provider started (directory=/data/dataiku/dss_data/config, cache_compression=lz4, main_lock=false, temp_dir=/data/dataiku/dss_data/tmp/txn/large-files, fs_cache=v1, git_support=true)
+[2024/10/19-10:15:02.254] [main] [DEBUG] [dku.security.encryption]  - Init crypto service
+[2024/10/19-10:15:02.296] [main] [DEBUG] [dku.config.crypto]  - Initializing config crypto
+[2024/10/19-10:15:02.319] [main] [INFO] [com.dataiku.dip.transactions.fs.FSyncUtils]  - Setting up fsync pool with 8 threads and CRC32 check is disabled
+[2024/10/19-10:15:02.322] [main] [INFO] [dip.transactions]  - Transaction provider started (directory=/data/dataiku/dss_data/config, cache_compression=lz4, main_lock=false, temp_dir=/data/dataiku/dss_data/tmp/txn/large-files, fs_cache=v1, git_support=true)
+[2024/10/19-10:15:02.416] [main] [INFO] [dku.cli.impersonation]  - Setting-up impersonation, firstTime=true
+[2024/10/19-10:15:02.445] [main] [DEBUG] [dip.transactions]  - Begin commit
+[2024/10/19-10:15:02.460] [main] [INFO] [dip.commitbehavior]  - Candidate commit [GLOBAL] [no:auth] CLI: Enabled multi-user-security (from command-line) : 
+ - /general-settings.json
+
+[2024/10/19-10:15:02.460] [main] [INFO] [dip.transactions]  - Writing journal
+[2024/10/19-10:15:02.462] [pool-4-thread-1] [DEBUG] [com.dataiku.dip.transactions.fs.FSyncUtils]  - writeAndSync: /data/dataiku/dss_data/config/.ts/general-settings.json.0
+[2024/10/19-10:15:02.468] [pool-4-thread-2] [DEBUG] [com.dataiku.dip.transactions.fs.FSyncUtils]  - writeAndSync: /data/dataiku/dss_data/config/.journal
+[2024/10/19-10:15:02.472] [main] [INFO] [dip.transactions]  - Journal written in 10 ms
+[2024/10/19-10:15:02.472] [main] [INFO] [dip.transactions]  - Executing journal
+[2024/10/19-10:15:02.482] [main] [INFO] [dip.transactions]  - Journal executed in 9 ms
+[2024/10/19-10:15:02.484] [main] [DEBUG] [com.dataiku.dip.transactions.git.CommitQueue]  - Executing Git commit:
+[GLOBAL] [no:auth] CLI: Enabled multi-user-security (from command-line) : 
+ - /general-settings.json
+
+[2024/10/19-10:15:02.600] [main] [INFO] [dip.transactions]  - Transaction committed [exec=119ms commitWait=0ms commitExec=140ms]
+[2024/10/19-10:15:02.607] [main] [DEBUG] [dku.remoterun.envhelper]  - Fetching remote run env def
+[2024/10/19-10:15:02.608] [main] [INFO] [dku.remoterun.fileshelper]  - Look for resource or file remote-run-env-def.json
+[2024/10/19-10:15:02.608] [main] [INFO] [dku.remoterun.fileshelper]  -  > not found, returning default
+[2024/10/19-10:15:02.608] [main] [INFO] [dku.remoterun.envhelper]  -  > No env def file found, creating default env def
+[+]
+[+] *********************************************************************
+[+] Impersonation initial setup complete
+[+] Please follow the documentation for mandatory configuration steps
+[+] (security module configuration and DSS setup)
+[+] *********************************************************************

@@ -1,0 +1,304 @@
+*********************************************************
+Data Science Studio installer: 2024/10/19-10:12:34
+Command line: /opt/dataiku-dss-13.1.2/installer.sh -y -t design -p 10000 -P python3.9 -d /data/dataiku/dss_data
+Version: {"product_version" : "13.1.2", "product_commitid" : ""}
+DIP_HOME: /data/dataiku/dss_data
+
+[+] Using Java at /usr/lib/jvm/java-17-openjdk/bin/java : openjdk version "17.0.12" 2024-07-16 LTS
+[+] Checking required dependencies
++ Detected OS distribution : almalinux 8.10
++ Checking required packages...
+[+] Installation starting
+[+] Initializing Python environment
+[+] Initializing Python environment using 'python3.9'
++ Using specified base Python binary: python3.9
+created virtual environment CPython3.9.19.final.0-64 in 601ms
+  creator CPython3Posix(dest=/data/dataiku/dss_data/pyenv, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/data/dataiku/.local/share/virtualenv)
+    added seed packages: pip==23.1, setuptools==67.6.1, wheel==0.40.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[+] Precompiling Dataiku Python code
+[+] Precompiling Jupyter Python code
+[+] Precompiling third-party Python 3.9 code
+[+] Performing initial install
+[+] Writing version metadata conf=13100 product=13.1.2 revision=
+[+] Writing default install config file
+[+] Writing default env file
+[+] Preparing data directory initial data
+Loading plugins: 
+[2024/10/19-10:13:55.108] [main] [INFO] [dku.modules]  - Opening all java modules in unnamed module @551aa95a
+[2024/10/19-10:13:55.109] [main] [INFO] [dku.modules]  - Opening java modules
+[2024/10/19-10:13:56.108] [main] [INFO] [dku.logging]  - Loading logging settings
+[2024/10/19-10:13:56.205] [main] [INFO] [dku.logging]  - Configuring additional logging settings from /opt/dataiku-dss-13.1.2/resources/logging/dku-log4j.properties
+[2024/10/19-10:13:56.658] [main] [INFO] [dku.logging]  - Configuring additional JUL logging settings from /opt/dataiku-dss-13.1.2/resources/logging/dku-log-jul.properties
+Installed kernelspec python3 in /data/dataiku/dss_data/jupyter-run/jupyter/kernels/python3
+Installing /opt/dataiku-dss-13.1.2/python39.packages/widgetsnbextension/static -> jupyter-js-widgets
+Making directory: /data/dataiku/dss_data/jupyter-run/jupyter/nbextensions/jupyter-js-widgets/
+Copying: /opt/dataiku-dss-13.1.2/python39.packages/widgetsnbextension/static/extension.js -> /data/dataiku/dss_data/jupyter-run/jupyter/nbextensions/jupyter-js-widgets/extension.js
+Copying: /opt/dataiku-dss-13.1.2/python39.packages/widgetsnbextension/static/extension.js.map -> /data/dataiku/dss_data/jupyter-run/jupyter/nbextensions/jupyter-js-widgets/extension.js.map
+- Validating: [32mOK[0m
+
+    To initialize this nbextension in the browser every time the notebook (or other app) loads:
+    
+          jupyter nbextension enable widgetsnbextension --user --py
+    
+Extension collapsible_headings/main enabled successfully
+Extension codefolding/main enabled successfully
+Extension toggle_all_line_numbers/main enabled successfully
+Extension hide_input_all/main enabled successfully
+Extension addbefore/main enabled successfully
+Extension jupyter-js-widgets/extension enabled successfully
+[+] Generating default env file
+[+] Generating supervisor configuration
+[+] Generating nginx configuration
+***************************************************************
+* Installation complete (DSS node type: design)
+* Next, start DSS using:
+*         '/data/dataiku/dss_data/bin/dss start'
+* Dataiku DSS will be accessible on http://<SERVER ADDRESS>:10000
+*
+* You can configure Dataiku DSS to start automatically at server boot with:
+*    sudo -i "/opt/dataiku-dss-13.1.2/scripts/install/install-boot.sh" "/data/dataiku/dss_data" dataiku
+***************************************************************
+*********************************************************
+Data Science Studio admin tool: 2024/10/19-10:14:18
+Command line: /data/dataiku/dss_data/bin/dssadmin install-R-integration
+DIP_HOME: /data/dataiku/dss_data
+
+[+] Checking dependencies
++ Detected OS distribution : almalinux 8.10
++ Checking required packages...
+[+] Installing required R packages into /data/dataiku/dss_data/R.lib
+Checking installed packages ...
+[+] Installing R kernel for Jupyter
+[InstallKernelSpec] Installed kernelspec ir in /data/dataiku/dss_data/jupyter-run/jupyter/kernels/ir
+[+] Creating wrapper script /data/dataiku/dss_data/bin/R
+[+] Done
+*********************************************************
+Data Science Studio admin tool: 2024/10/19-10:15:05
+Command line: /data/dataiku/dss_data/bin/dssadmin install-hadoop-integration -standaloneArchive /opt/dataiku/dataiku-dss-hadoop-standalone-libs-generic-hadoop3-CURRENT.tar.gz
+DIP_HOME: /data/dataiku/dss_data
+
+[+] Standalone mode selected
+[+] Enabling Hadoop in DSS
+Loading plugins: 
+[2024/10/19-10:15:26.518] [main] [INFO] [dku.modules]  - Opening all java modules in unnamed module @3712b94
+[2024/10/19-10:15:26.519] [main] [INFO] [dku.modules]  - Opening java modules
+[2024/10/19-10:15:26.560] [main] [INFO] [dku.logging]  - Loading logging settings
+[2024/10/19-10:15:26.564] [main] [INFO] [dku.logging]  - Configuring additional logging settings from /opt/dataiku-dss-13.1.2/resources/logging/dku-log4j.properties
+[2024/10/19-10:15:26.587] [main] [INFO] [dku.logging]  - Configuring additional JUL logging settings from /opt/dataiku-dss-13.1.2/resources/logging/dku-log-jul.properties
+[2024/10/19-10:15:27.164] [main] [INFO] [dku.builtins]  - Loading countries geo data
+[2024/10/19-10:15:27.211] [main] [INFO] [dku.modules]  - Opening all java modules in unnamed module @3712b94
+[2024/10/19-10:15:27.211] [main] [INFO] [dku.modules]  - Opening java modules
+[2024/10/19-10:15:27.426] [main] [INFO] [com.dataiku.dip.transactions.fs.FSyncUtils]  - Setting up fsync pool with 8 threads and CRC32 check is disabled
+[2024/10/19-10:15:27.427] [main] [INFO] [com.dataiku.dip.DKUApp]  - Reading /data/dataiku/dss_data/install.ini
+[2024/10/19-10:15:27.787] [main] [INFO] [dip.transactions]  - Transaction provider started (directory=/data/dataiku/dss_data/config, cache_compression=lz4, main_lock=false, temp_dir=/data/dataiku/dss_data/tmp/txn/large-files, fs_cache=v1, git_support=true)
+[2024/10/19-10:15:27.822] [main] [INFO] [com.dataiku.dip.transactions.fs.FSyncUtils]  - Setting up fsync pool with 8 threads and CRC32 check is disabled
+[2024/10/19-10:15:27.825] [main] [INFO] [dip.transactions]  - Transaction provider started (directory=/data/dataiku/dss_data/config, cache_compression=lz4, main_lock=false, temp_dir=/data/dataiku/dss_data/tmp/txn/large-files, fs_cache=v1, git_support=true)
+[2024/10/19-10:15:27.953] [main] [INFO] [dku.spark]  - securityEnabled=false keytab=null principal=null
+[2024/10/19-10:15:27.978] [main] [DEBUG] [dip.transactions]  - Begin commit
+[2024/10/19-10:15:27.990] [main] [INFO] [dip.commitbehavior]  - Candidate commit [GLOBAL] [no:auth] CLI: Enabled Hadoop integration (from command-line) : 
+ - /general-settings.json
+
+[2024/10/19-10:15:27.991] [main] [INFO] [dip.transactions]  - Writing journal
+[2024/10/19-10:15:27.993] [pool-4-thread-1] [DEBUG] [com.dataiku.dip.transactions.fs.FSyncUtils]  - writeAndSync: /data/dataiku/dss_data/config/.ts/general-settings.json.0
+[2024/10/19-10:15:27.998] [pool-4-thread-2] [DEBUG] [com.dataiku.dip.transactions.fs.FSyncUtils]  - writeAndSync: /data/dataiku/dss_data/config/.journal
+[2024/10/19-10:15:28.001] [main] [INFO] [dip.transactions]  - Journal written in 9 ms
+[2024/10/19-10:15:28.001] [main] [INFO] [dip.transactions]  - Executing journal
+[2024/10/19-10:15:28.015] [main] [INFO] [dip.transactions]  - Journal executed in 13 ms
+[2024/10/19-10:15:28.016] [main] [DEBUG] [com.dataiku.dip.transactions.git.CommitQueue]  - Executing Git commit:
+[GLOBAL] [no:auth] CLI: Enabled Hadoop integration (from command-line) : 
+ - /general-settings.json
+
+[2024/10/19-10:15:28.133] [main] [INFO] [dip.transactions]  - Transaction committed [exec=143ms commitWait=0ms commitExec=143ms]
+[2024/10/19-10:15:28.143] [main] [DEBUG] [dku.remoterun.envhelper]  - Fetching remote run env def
+[2024/10/19-10:15:28.144] [main] [INFO] [dku.remoterun.fileshelper]  - Look for resource or file remote-run-env-def.json
+[2024/10/19-10:15:28.144] [main] [INFO] [dku.remoterun.fileshelper]  -  > not found, returning default
+[2024/10/19-10:15:28.144] [main] [INFO] [dku.remoterun.envhelper]  -  > No env def file found, creating default env def
+*********************************************************
+Data Science Studio admin tool: 2024/10/19-10:15:28
+Command line: /data/dataiku/dss_data/bin/dssadmin install-spark-integration -standaloneArchive /opt/dataiku/dataiku-dss-spark-standalone-CURRENT.tar.gz -forK8S
+DIP_HOME: /data/dataiku/dss_data
+
+[+] Standalone mode selected
++ Using SPARK_HOME=/opt/dataiku-dss-13.1.2/spark-standalone-home
++ Found Spark version 3.4.1
++ Creating configuration file: /data/dataiku/dss_data/bin/env-spark.sh
++ Enabling DSS Spark support
+Loading plugins: 
+[2024/10/19-10:16:07.468] [main] [INFO] [dku.modules]  - Opening all java modules in unnamed module @3712b94
+[2024/10/19-10:16:07.468] [main] [INFO] [dku.modules]  - Opening java modules
+[2024/10/19-10:16:07.504] [main] [INFO] [dku.logging]  - Loading logging settings
+[2024/10/19-10:16:07.509] [main] [INFO] [dku.logging]  - Configuring additional logging settings from /opt/dataiku-dss-13.1.2/resources/logging/dku-log4j.properties
+[2024/10/19-10:16:07.529] [main] [INFO] [dku.logging]  - Configuring additional JUL logging settings from /opt/dataiku-dss-13.1.2/resources/logging/dku-log-jul.properties
+[2024/10/19-10:16:08.159] [main] [INFO] [dku.builtins]  - Loading countries geo data
+[2024/10/19-10:16:08.208] [main] [INFO] [dku.modules]  - Opening all java modules in unnamed module @3712b94
+[2024/10/19-10:16:08.208] [main] [INFO] [dku.modules]  - Opening java modules
+[2024/10/19-10:16:08.476] [main] [INFO] [com.dataiku.dip.transactions.fs.FSyncUtils]  - Setting up fsync pool with 8 threads and CRC32 check is disabled
+[2024/10/19-10:16:08.477] [main] [INFO] [com.dataiku.dip.DKUApp]  - Reading /data/dataiku/dss_data/install.ini
+[2024/10/19-10:16:08.850] [main] [INFO] [dip.transactions]  - Transaction provider started (directory=/data/dataiku/dss_data/config, cache_compression=lz4, main_lock=false, temp_dir=/data/dataiku/dss_data/tmp/txn/large-files, fs_cache=v1, git_support=true)
+[2024/10/19-10:16:08.933] [main] [INFO] [com.dataiku.dip.transactions.fs.FSyncUtils]  - Setting up fsync pool with 8 threads and CRC32 check is disabled
+[2024/10/19-10:16:08.936] [main] [INFO] [dip.transactions]  - Transaction provider started (directory=/data/dataiku/dss_data/config, cache_compression=lz4, main_lock=false, temp_dir=/data/dataiku/dss_data/tmp/txn/large-files, fs_cache=v1, git_support=true)
+[2024/10/19-10:16:09.030] [main] [INFO] [x]  - **** Hadoop flavor **** {"flavor":"generic","hiveSupportsMREngine":false,"hive3":false}
+[2024/10/19-10:16:09.069] [main] [INFO] [dip.commitbehavior]  - Candidate commit [GLOBAL] [no:auth] CLI: Enabled Spark (from command-line) : 
+ - /general-settings.json
+
+[2024/10/19-10:16:09.069] [main] [INFO] [dip.transactions]  - Writing journal
+[2024/10/19-10:16:09.078] [main] [INFO] [dip.transactions]  - Journal written in 7 ms
+[2024/10/19-10:16:09.078] [main] [INFO] [dip.transactions]  - Executing journal
+[2024/10/19-10:16:09.089] [main] [INFO] [dip.transactions]  - Journal executed in 10 ms
+[2024/10/19-10:16:09.192] [main] [INFO] [dip.transactions]  - Transaction committed [exec=116ms commitWait=0ms commitExec=123ms]
+[2024/10/19-10:16:09.199] [main] [INFO] [dku.remoterun.fileshelper]  - Look for resource or file remote-run-env-def.json
+[2024/10/19-10:16:09.199] [main] [INFO] [dku.remoterun.fileshelper]  -  > not found, returning default
+[2024/10/19-10:16:09.199] [main] [INFO] [dku.remoterun.envhelper]  -  > No env def file found, creating default env def
++ Installing toree/jupyter integration
++ Done
+*********************************************************
+Data Science Studio admin tool: 2024/10/19-10:23:02
+Command line: /data/dataiku/dss_data/bin/dssadmin build-base-image --type container-exec --distrib almalinux8 --mode use
+DIP_HOME: /data/dataiku/dss_data
+
+2024-10-19 10:23:02,788 INFO Building image with options: Namespace(type='container-exec', mode='use', source_image=None, source_registry=None, distrib='almalinux8', build_from_image=None, system_packages=None, http_proxy=None, https_proxy=None, no_proxy=None, dockerfile_prepend=None, cran_mirror='https://cloud.r-project.org', docker_build_opt=None, target_registry=None, tag=None, r=True, py27=True, py37=True, py38=False, py39=True, py310=False, py311=False, cuda=False, cuda_version='10.0', dockerfile_append=None, copy_to_buildenv=None)
+2024-10-19 10:23:02,832 INFO Building final image from dataiku-dss-container-exec-base:dss-13.1.2-almalinux8-r4-py3.9
+2024-10-19 10:23:02,832 INFO Preparing build env and Dockerfile
+2024-10-19 10:23:02,832 INFO Docker build env and Dockerfile ready, building it
+2024-10-19 10:23:02,832 INFO Build env path:/data/dataiku/dss_data/tmp/exec-docker-base-image.0cqrb_rr
+2024-10-19 10:23:02,832 INFO Dockerfile content:
+FROM dataiku-dss-container-exec-base:dss-13.1.2-almalinux8-r4-py3.9
+
+2024-10-19 10:23:02,833 INFO Running command: ['docker', 'build', '-t', 'dku-exec-base-qna8zro2pmuxymljjhjey6ey:dss-13.1.2', '/data/dataiku/dss_data/tmp/exec-docker-base-image.0cqrb_rr']
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 105B done
+#1 DONE 0.2s
+
+#2 [internal] load metadata for docker.io/library/dataiku-dss-container-exec-base:dss-13.1.2-almalinux8-r4-py3.9
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.1s
+
+#4 [1/1] FROM docker.io/library/dataiku-dss-container-exec-base:dss-13.1.2-almalinux8-r4-py3.9
+#4 DONE 3.9s
+
+#5 exporting to image
+#5 exporting layers done
+#5 writing image sha256:496f01486baa945db7783234c887c78172f2f8ae7f6ace8de3e6a49d491cf768 0.0s done
+#5 naming to docker.io/library/dku-exec-base-qna8zro2pmuxymljjhjey6ey:dss-13.1.2 0.0s done
+#5 DONE 0.0s
+2024-10-19 10:23:07,961 INFO Done, cleaning up
+*********************************************************
+Data Science Studio admin tool: 2024/10/19-10:23:08
+Command line: /data/dataiku/dss_data/bin/dssadmin build-base-image --type spark --distrib almalinux8 --mode use
+DIP_HOME: /data/dataiku/dss_data
+
+2024-10-19 10:23:08,317 INFO Building image with options: Namespace(type='spark', mode='use', source_image=None, source_registry=None, distrib='almalinux8', build_from_image=None, system_packages=None, http_proxy=None, https_proxy=None, no_proxy=None, dockerfile_prepend=None, cran_mirror='https://cloud.r-project.org', docker_build_opt=None, target_registry=None, tag=None, r=True, py27=True, py37=True, py38=False, py39=True, py310=False, py311=False, cuda=False, cuda_version='10.0', dockerfile_append=None, copy_to_buildenv=None)
+2024-10-19 10:23:08,357 INFO Building final image from dataiku-dss-spark-exec-base:dss-13.1.2-almalinux8-r4-py3.9
+2024-10-19 10:23:08,357 INFO Preparing build env and Dockerfile
+2024-10-19 10:23:08,357 INFO Docker build env and Dockerfile ready, building it
+2024-10-19 10:23:08,357 INFO Build env path:/data/dataiku/dss_data/tmp/exec-docker-base-image.e2i5q_da
+2024-10-19 10:23:08,357 INFO Dockerfile content:
+FROM dataiku-dss-spark-exec-base:dss-13.1.2-almalinux8-r4-py3.9
+
+2024-10-19 10:23:08,358 INFO Running command: ['docker', 'build', '-t', 'dku-spark-base-qna8zro2pmuxymljjhjey6ey:dss-13.1.2', '/data/dataiku/dss_data/tmp/exec-docker-base-image.e2i5q_da']
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 101B done
+#1 DONE 0.3s
+
+#2 [internal] load metadata for docker.io/library/dataiku-dss-spark-exec-base:dss-13.1.2-almalinux8-r4-py3.9
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/1] FROM docker.io/library/dataiku-dss-spark-exec-base:dss-13.1.2-almalinux8-r4-py3.9
+#4 DONE 1.1s
+
+#5 exporting to image
+#5 exporting layers done
+#5 writing image sha256:07d12a23f5f605002b9ebd16f9abe76805cf5c447014d36d9b7dc9466be6ea17 0.0s done
+#5 naming to docker.io/library/dku-spark-base-qna8zro2pmuxymljjhjey6ey:dss-13.1.2 0.0s done
+#5 DONE 0.1s
+2024-10-19 10:23:11,364 INFO Done, cleaning up
+*********************************************************
+Data Science Studio admin tool: 2024/10/19-10:23:11
+Command line: /data/dataiku/dss_data/bin/dssadmin build-base-image --type api-deployer --distrib almalinux8 --mode use
+DIP_HOME: /data/dataiku/dss_data
+
+2024-10-19 10:23:11,712 INFO Building image with options: Namespace(type='api-deployer', mode='use', source_image=None, source_registry=None, distrib='almalinux8', build_from_image=None, system_packages=None, http_proxy=None, https_proxy=None, no_proxy=None, dockerfile_prepend=None, cran_mirror='https://cloud.r-project.org', docker_build_opt=None, target_registry=None, tag=None, r=True, py27=True, py37=True, py38=False, py39=True, py310=False, py311=False, cuda=False, cuda_version='10.0', dockerfile_append=None, copy_to_buildenv=None)
+2024-10-19 10:23:11,751 INFO Building final image from dataiku-dss-apideployer-base:dss-13.1.2-almalinux8-r4-py3.9
+2024-10-19 10:23:11,752 INFO Preparing build env and Dockerfile
+2024-10-19 10:23:11,752 INFO Docker build env and Dockerfile ready, building it
+2024-10-19 10:23:11,752 INFO Build env path:/data/dataiku/dss_data/tmp/exec-docker-base-image.7qy2hv9d
+2024-10-19 10:23:11,752 INFO Dockerfile content:
+FROM dataiku-dss-apideployer-base:dss-13.1.2-almalinux8-r4-py3.9
+
+2024-10-19 10:23:11,752 INFO Running command: ['docker', 'build', '-t', 'dku-apideployer-apinode-base:dss-13.1.2', '/data/dataiku/dss_data/tmp/exec-docker-base-image.7qy2hv9d']
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 102B done
+#1 DONE 0.2s
+
+#2 [internal] load metadata for docker.io/library/dataiku-dss-apideployer-base:dss-13.1.2-almalinux8-r4-py3.9
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.1s
+
+#4 [1/1] FROM docker.io/library/dataiku-dss-apideployer-base:dss-13.1.2-almalinux8-r4-py3.9
+#4 DONE 5.1s
+
+#5 exporting to image
+#5 exporting layers done
+#5 writing image sha256:8fa3654f9bbed0fe8cd76c26b94a8895e7c3f86ea9e7d2d547cbb5ee11e405ce 0.0s done
+#5 naming to docker.io/library/dku-apideployer-apinode-base:dss-13.1.2 0.0s done
+#5 DONE 0.1s
+2024-10-19 10:23:18,236 INFO Done, cleaning up
+*********************************************************
+Data Science Studio admin tool: 2024/10/19-10:23:18
+Command line: /data/dataiku/dss_data/bin/dssadmin build-base-image --type cde --distrib almalinux8 --mode use
+DIP_HOME: /data/dataiku/dss_data
+
+2024-10-19 10:23:18,589 INFO Building image with options: Namespace(type='cde', mode='use', source_image=None, source_registry=None, distrib='almalinux8', build_from_image=None, system_packages=None, http_proxy=None, https_proxy=None, no_proxy=None, dockerfile_prepend=None, cran_mirror='https://cloud.r-project.org', docker_build_opt=None, target_registry=None, tag=None, r=True, py27=True, py37=True, py38=False, py39=True, py310=False, py311=False, cuda=False, cuda_version='10.0', dockerfile_append=None, copy_to_buildenv=None)
+2024-10-19 10:23:18,629 INFO Building final image from dataiku-dss-cde-base:dss-13.1.2-almalinux8-r4-py3.9
+2024-10-19 10:23:18,630 INFO Preparing build env and Dockerfile
+2024-10-19 10:23:18,630 INFO Docker build env and Dockerfile ready, building it
+2024-10-19 10:23:18,630 INFO Build env path:/data/dataiku/dss_data/tmp/exec-docker-base-image.g7uwrpyt
+2024-10-19 10:23:18,630 INFO Dockerfile content:
+FROM dataiku-dss-cde-base:dss-13.1.2-almalinux8-r4-py3.9
+
+2024-10-19 10:23:18,630 INFO Running command: ['docker', 'build', '-t', 'dku-cde-base-qna8zro2pmuxymljjhjey6ey:dss-13.1.2', '/data/dataiku/dss_data/tmp/exec-docker-base-image.g7uwrpyt']
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 94B done
+#1 DONE 0.4s
+
+#2 [internal] load metadata for docker.io/library/dataiku-dss-cde-base:dss-13.1.2-almalinux8-r4-py3.9
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context:
+#3 transferring context: 2B done
+#3 DONE 0.4s
+
+#4 [1/1] FROM docker.io/library/dataiku-dss-cde-base:dss-13.1.2-almalinux8-r4-py3.9
+#4 DONE 0.2s
+
+#5 exporting to image
+#5 exporting layers done
+#5 writing image sha256:389c3741c5a0d8c49f8b9839091eba9df87239d85df33bf52f58523492eb76dc done
+#5 naming to docker.io/library/dku-cde-base-qna8zro2pmuxymljjhjey6ey:dss-13.1.2 done
+#5 DONE 0.0s
+2024-10-19 10:23:20,272 INFO Done, cleaning up

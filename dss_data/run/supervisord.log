@@ -1,0 +1,10 @@
+2024-10-19 10:23:21,086 INFO RPC interface 'supervisor' initialized
+2024-10-19 10:23:21,088 INFO daemonizing the supervisord process
+2024-10-19 10:23:21,088 INFO set current directory: '/data/dataiku/dss_data/run'
+2024-10-19 10:23:21,088 INFO supervisord started with pid 9507
+2024-10-19 10:23:22,091 INFO spawned: 'backend' with pid 9511
+2024-10-19 10:23:22,093 INFO spawned: 'ipython' with pid 9512
+2024-10-19 10:23:22,095 INFO spawned: 'nginx' with pid 9513
+2024-10-19 10:23:27,414 INFO success: ipython entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-10-19 10:23:27,414 INFO success: nginx entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-10-19 10:23:32,186 INFO success: backend entered RUNNING state, process has stayed up for > than 10 seconds (startsecs)
